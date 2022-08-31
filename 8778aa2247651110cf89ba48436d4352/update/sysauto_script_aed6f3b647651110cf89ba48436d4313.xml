@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <name>Daily Leaderboard Update</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2022-08-30 12:30:12</run_start>
+        <run_time>1970-01-01 00:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[try {
+    var r = new sn_ws.RESTMessageV2("Populate Players", "Default GET");
+
+    var response = r.execute();
+    var responseBody = response.getBody();
+
+    var httpStatus = response.getStatusCode();
+
+    var result = JSON.parse(responseBody);
+
+    var playerCount = result.entries.length;
+	var remove = true;
+	var addToList = '1111';
+
+    var target = new GlideRecord('x_872971_lol_player');
+    target.query();
+    while (target.next()) {
+        remove = true;
+		gs.info('gintautas test3 ' + target.summonerid);
+        for (var i = 0; i < playerCount; i++) {
+            if (target.summonerid == result.entries[i].summonerId) {
+                target.wins = result.entries[i].wins;
+                target.loses = result.entries[i].losses;
+                target.leaguepoints = result.entries[i].leaguePoints;
+                target.update();
+                remove = false;
+            }
+        }
+        if (remove) {
+            target.deleteRecord();
+        }
+    }
+	
+	var target2 = new GlideRecord('x_872971_lol_player');
+    target2.query();
+	z = 0;
+	var noobs = new Array(target2.length);
+	while(target2.next()){
+		//gs.info('gintautas array ' + target2.summonerid);
+		//noobs.push(target2.summonerid);
+		noobs[z] = target2.summonerid.toString();
+		gs.info('gintautas array ' + noobs[z] + ' ' + z);  //   <---
+		z++;
+	}
+	gs.info('gintautas array v2' + noobs[0] + ' and ' + noobs[111]);
+
+
+    for (var j = 0; j < playerCount; j++) {
+        addToList = '1111';
+		//gs.info('gintautas test3 ' + result.entries[j].summonerId);
+        for (var k = 0 ; k < noobs.length ; k++) {
+			//gs.info('gintautas test4 ' + target2.summonerid);
+            if (noobs[k] == result.entries[j].summonerId) {
+                addToList = '2222';
+				//gs.info('gintautas test false 2222 xd' + j + ' and ' + noobs[k]);
+            }
+        }
+		//gs.info('gintautas test false 2222 xdd' + addToList);
+        if (addToList == '1111') {
+            var player = new GlideRecord('x_872971_lol_player');
+            player.initialize();
+            player.summonername = result.entries[j].summonerName;
+            player.summonerid = result.entries[j].summonerId;
+            player.wins = result.entries[j].wins;
+            player.loses = result.entries[j].losses;
+            player.leaguepoints = result.entries[j].leaguePoints;
+            player.insert();
+        }
+    }
+
+
+} catch (ex) {
+    var message = ex.message;
+}
+
+
+//gs.info('gintautas test' + playerCount);]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:35:30</sys_created_on>
+        <sys_id>aed6f3b647651110cf89ba48436d4313</sys_id>
+        <sys_mod_count>66</sys_mod_count>
+        <sys_name>Daily Leaderboard Update</sys_name>
+        <sys_package display_value="LOL" source="x_872971_lol">8778aa2247651110cf89ba48436d4352</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LOL">8778aa2247651110cf89ba48436d4352</sys_scope>
+        <sys_update_name>sysauto_script_aed6f3b647651110cf89ba48436d4313</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 16:22:44</sys_updated_on>
+        <time_zone>floating</time_zone>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

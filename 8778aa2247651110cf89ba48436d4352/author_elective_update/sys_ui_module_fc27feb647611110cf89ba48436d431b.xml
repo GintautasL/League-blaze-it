@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application display_value="Champion Points">3827feb647611110cf89ba48436d430c</application>
+        <filter/>
+        <name>Champion Points</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_872971_lol.champion_points_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 07:51:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fc27feb647611110cf89ba48436d431b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Champion Points</sys_name>
+        <sys_package display_value="LOL" source="x_872971_lol">8778aa2247651110cf89ba48436d4352</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LOL">8778aa2247651110cf89ba48436d4352</sys_scope>
+        <sys_update_name>sys_ui_module_fc27feb647611110cf89ba48436d431b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 07:51:49</sys_updated_on>
+        <table>x_872971_lol_champion_points</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="LOL">8778aa2247651110cf89ba48436d4352</application>
+        <file_path/>
+        <instance_id>93da648bdb09c5105749cac5059619a7</instance_id>
+        <instance_name>dev121910</instance_name>
+        <name>sys_ui_module_fc27feb647611110cf89ba48436d431b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Champion Points">3827feb647611110cf89ba48436d430c</application><filter/><name>Champion Points</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_872971_lol.champion_points_user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-30 07:51:49</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>fc27feb647611110cf89ba48436d431b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Champion Points</sys_name><sys_package display_value="LOL" source="x_872971_lol">8778aa2247651110cf89ba48436d4352</sys_package><sys_policy/><sys_scope display_value="LOL">8778aa2247651110cf89ba48436d4352</sys_scope><sys_update_name>sys_ui_module_fc27feb647611110cf89ba48436d431b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-30 07:51:49</sys_updated_on><table>x_872971_lol_champion_points</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload_hash>1529978542</payload_hash>
+        <record_name>Champion Points</record_name>
+        <reverted_from/>
+        <source>cf78aa2247651110cf89ba48436d4354</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 07:51:50</sys_created_on>
+        <sys_id>3827feb647611110cf89ba48436d431e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182edbc31f80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 07:51:50</sys_updated_on>
+        <type>Module</type>
+        <update_guid>7027feb6d16111102d2a4fc75673aa1e</update_guid>
+        <update_guid_history>7027feb6d16111102d2a4fc75673aa1e:1529978542</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 07:56:16</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>274703970f92415eaeae12a27f6d5ae4</sys_id>
+        <sys_metadata>fc27feb647611110cf89ba48436d431b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Champion Points</sys_name>
+        <sys_package display_value="LOL" source="x_872971_lol">8778aa2247651110cf89ba48436d4352</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="LOL">8778aa2247651110cf89ba48436d4352</sys_scope>
+        <sys_scope_delete display_value="">145d22ba8e824cc09a1fcbef4cc59000</sys_scope_delete>
+        <sys_update_name>sys_ui_module_fc27feb647611110cf89ba48436d431b</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_fc27feb647611110cf89ba48436d431b">3827feb647611110cf89ba48436d431e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 07:56:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

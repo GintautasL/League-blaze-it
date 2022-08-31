@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content/>
+        <function_name>Default GET</function_name>
+        <http_method>get</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>Populate Players [ Default GET ]</qualified_name>
+        <rest_endpoint>https://euw1.api.riotgames.com/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5</rest_endpoint>
+        <rest_message display_value="Populate Players">05ee32e647e51110cf89ba48436d43a7</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-29 13:48:18</sys_created_on>
+        <sys_id>3c2f3aa647e51110cf89ba48436d4350</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Default GET</sys_name>
+        <sys_package display_value="LOL" source="x_872971_lol">8778aa2247651110cf89ba48436d4352</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LOL">8778aa2247651110cf89ba48436d4352</sys_scope>
+        <sys_update_name>sys_rest_message_fn_3c2f3aa647e51110cf89ba48436d4350</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-29 13:48:18</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

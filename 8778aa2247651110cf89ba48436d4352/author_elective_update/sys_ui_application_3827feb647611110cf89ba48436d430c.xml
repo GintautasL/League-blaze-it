@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application">
+    <sys_ui_application action="DELETE">
+        <active>true</active>
+        <hint/>
+        <name>Champion Points</name>
+        <order/>
+        <roles>x_872971_lol.champion_points_user</roles>
+        <sys_class_name>sys_ui_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 07:51:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3827feb647611110cf89ba48436d430c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Champion Points</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="LOL" source="x_872971_lol">8778aa2247651110cf89ba48436d4352</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LOL">8778aa2247651110cf89ba48436d4352</sys_scope>
+        <sys_update_name>sys_ui_application_3827feb647611110cf89ba48436d430c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 07:51:49</sys_updated_on>
+    </sys_ui_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="LOL">8778aa2247651110cf89ba48436d4352</application>
+        <file_path/>
+        <instance_id>93da648bdb09c5105749cac5059619a7</instance_id>
+        <instance_name>dev121910</instance_name>
+        <name>sys_ui_application_3827feb647611110cf89ba48436d430c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application"><sys_ui_application action="INSERT_OR_UPDATE"><active>true</active><hint/><name>Champion Points</name><order/><roles>x_872971_lol.champion_points_user</roles><sys_class_name>sys_ui_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-30 07:51:49</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>3827feb647611110cf89ba48436d430c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Champion Points</sys_name><sys_overrides/><sys_package display_value="LOL" source="x_872971_lol">8778aa2247651110cf89ba48436d4352</sys_package><sys_policy/><sys_scope display_value="LOL">8778aa2247651110cf89ba48436d4352</sys_scope><sys_update_name>sys_ui_application_3827feb647611110cf89ba48436d430c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-30 07:51:49</sys_updated_on></sys_ui_application></record_update>]]></payload>
+        <payload_hash>-1055803245</payload_hash>
+        <record_name>Champion Points</record_name>
+        <reverted_from/>
+        <source>cf78aa2247651110cf89ba48436d4354</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 07:51:49</sys_created_on>
+        <sys_id>3827feb647611110cf89ba48436d431b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182edbc31c80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 07:51:49</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>7027feb69761111003171147999d301b</update_guid>
+        <update_guid_history>7027feb69761111003171147999d301b:-1055803245</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 07:56:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_application">sys_ui_application</sys_db_object>
+        <sys_id>07028936a5194a328196c531d9369671</sys_id>
+        <sys_metadata>3827feb647611110cf89ba48436d430c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Champion Points</sys_name>
+        <sys_package display_value="LOL" source="x_872971_lol">8778aa2247651110cf89ba48436d4352</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="LOL">8778aa2247651110cf89ba48436d4352</sys_scope>
+        <sys_scope_delete display_value="">145d22ba8e824cc09a1fcbef4cc59000</sys_scope_delete>
+        <sys_update_name>sys_ui_application_3827feb647611110cf89ba48436d430c</sys_update_name>
+        <sys_update_version display_value="sys_ui_application_3827feb647611110cf89ba48436d430c">3827feb647611110cf89ba48436d431b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 07:56:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message">
+    <sys_rest_message action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <authentication_type>no_authentication</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <description>Populates champion points table</description>
+        <name>Populate Champion Points</name>
+        <oauth2_profile/>
+        <protocol_name/>
+        <rest_endpoint>https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/</rest_endpoint>
+        <sys_class_name>sys_rest_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 08:50:38</sys_created_on>
+        <sys_id>fce307b247a11110cf89ba48436d43b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Populate Champion Points</sys_name>
+        <sys_package display_value="LOL" source="x_872971_lol">8778aa2247651110cf89ba48436d4352</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LOL">8778aa2247651110cf89ba48436d4352</sys_scope>
+        <sys_update_name>sys_rest_message_fce307b247a11110cf89ba48436d43b9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 08:50:38</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message>
+</record_update>

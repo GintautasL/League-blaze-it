@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Player" max_length="40" name="x_872971_lol_player" sizeclass="300" type="collection">
+        <element label="LeaguePoints" max_length="40" name="leaguepoints" type="integer"/>
+        <element label="Loses" max_length="40" name="loses" type="integer"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="SummonerID" max_length="60" name="summonerid" type="string"/>
+        <element display="true" label="SummonerName" max_length="40" name="summonername" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="Winrate (%)" max_length="40" name="winrate" type="float"/>
+        <element label="Wins" max_length="40" name="wins" type="integer"/>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

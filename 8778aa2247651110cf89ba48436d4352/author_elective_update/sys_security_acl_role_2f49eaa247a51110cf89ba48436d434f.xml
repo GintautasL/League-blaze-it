@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-29 12:12:55</sys_created_on>
+        <sys_id>2f49eaa247a51110cf89ba48436d434f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_872971_lol_player.x_872971_lol.player_user</sys_name>
+        <sys_package display_value="LOL" source="x_872971_lol">8778aa2247651110cf89ba48436d4352</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LOL">8778aa2247651110cf89ba48436d4352</sys_scope>
+        <sys_security_acl display_value="x_872971_lol_player">2b49eaa247a51110cf89ba48436d434c</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_2f49eaa247a51110cf89ba48436d434f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-29 12:12:55</sys_updated_on>
+        <sys_user_role display_value="x_872971_lol.player_user" name="x_872971_lol.player_user">574922a247a51110cf89ba48436d432d</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="LOL">8778aa2247651110cf89ba48436d4352</application>
+        <file_path/>
+        <instance_id>93da648bdb09c5105749cac5059619a7</instance_id>
+        <instance_name>dev121910</instance_name>
+        <name>sys_security_acl_role_2f49eaa247a51110cf89ba48436d434f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-29 12:12:55</sys_created_on><sys_id>2f49eaa247a51110cf89ba48436d434f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_872971_lol_player.x_872971_lol.player_user</sys_name><sys_package display_value="LOL" source="x_872971_lol">8778aa2247651110cf89ba48436d4352</sys_package><sys_policy/><sys_scope display_value="LOL">8778aa2247651110cf89ba48436d4352</sys_scope><sys_security_acl display_value="x_872971_lol_player">2b49eaa247a51110cf89ba48436d434c</sys_security_acl><sys_update_name>sys_security_acl_role_2f49eaa247a51110cf89ba48436d434f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-29 12:12:55</sys_updated_on><sys_user_role display_value="x_872971_lol.player_user" name="x_872971_lol.player_user">574922a247a51110cf89ba48436d432d</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>401323977</payload_hash>
+        <record_name>x_872971_lol_player.x_872971_lol.player_user</record_name>
+        <reverted_from/>
+        <source>cf78aa2247651110cf89ba48436d4354</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-29 12:12:55</sys_created_on>
+        <sys_id>e749eaa247a51110cf89ba48436d4352</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182e984df5b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-29 12:12:55</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>2349eaa282a5111096660c497d5ff252</update_guid>
+        <update_guid_history>2349eaa282a5111096660c497d5ff252:401323977</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_872971_lol_player.x_872971_lol.player_user">0939fc5347295110cf89ba48436d4377</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-31 11:58:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>6e35d8428ac945208fee3094878d6240</sys_id>
+        <sys_metadata>2f49eaa247a51110cf89ba48436d434f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_872971_lol_player.x_872971_lol.player_user</sys_name>
+        <sys_package display_value="LOL" source="x_872971_lol">8778aa2247651110cf89ba48436d4352</sys_package>
+        <sys_parent display_value="x_872971_lol_player">2b49eaa247a51110cf89ba48436d434c</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="LOL">8778aa2247651110cf89ba48436d4352</sys_scope>
+        <sys_scope_delete display_value="">145d22ba8e824cc09a1fcbef4cc59000</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_2f49eaa247a51110cf89ba48436d434f</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_2f49eaa247a51110cf89ba48436d434f">e749eaa247a51110cf89ba48436d4352</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-31 11:58:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

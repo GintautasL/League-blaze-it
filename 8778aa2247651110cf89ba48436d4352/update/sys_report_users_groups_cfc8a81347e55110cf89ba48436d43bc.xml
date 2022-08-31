@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id display_value="LOL Users" name="LOL Users">93bb4c1747655110cf89ba48436d438f</group_id>
+        <report_id display_value="Mastery points by Player/Champion">e5f5bf4b47e15110cf89ba48436d4382</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-31 10:46:54</sys_created_on>
+        <sys_id>cfc8a81347e55110cf89ba48436d43bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>e5f5bf4b47e15110cf89ba48436d4382</sys_name>
+        <sys_package display_value="LOL" source="x_872971_lol">8778aa2247651110cf89ba48436d4352</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LOL">8778aa2247651110cf89ba48436d4352</sys_scope>
+        <sys_update_name>sys_report_users_groups_cfc8a81347e55110cf89ba48436d43bc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-31 10:46:54</sys_updated_on>
+        <user_id/>
+    </sys_report_users_groups>
+</record_update>

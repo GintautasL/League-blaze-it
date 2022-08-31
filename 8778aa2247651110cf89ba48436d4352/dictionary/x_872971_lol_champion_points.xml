@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Champion Points" max_length="40" name="x_872971_lol_champion_points" sizeclass="50" type="collection">
+        <element label="ChampionID" max_length="40" name="championid" type="integer"/>
+        <element label="ChampionName" max_length="40" name="championname" type="string"/>
+        <element label="MasteryPoints" max_length="40" name="masterypoints" type="integer"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element display="true" label="Player Champion" max_length="32" name="player_champion" reference="x_872971_lol_player" type="reference"/>
+        <index name="index">
+            <element name="player_champion"/>
+        </index>
+    </element>
+</database>
