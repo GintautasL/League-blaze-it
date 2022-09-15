@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>GET Player</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    try {
+
+        var playersAPIHandler = new PlayersAPIHandler();
+		var id  = request.pathParams.id;
+		var playerInfo = playersAPIHandler.getPlayer(id);
+		
+		response.setContentType('application/json');
+
+        var writer = response.getStreamWriter();
+        writer.writeString(JSON.stringify(playerInfo));
+
+    } catch (e) {
+        var error = new sn_ws_err.ServiceError();
+            error.setStatus(e.code);
+            error.setMessage(e.code + ", " + e.message);
+            //error.setDetail("no player with given id");
+			return error;
+    }
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_872971_lol/players_api/{id}</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/{id}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-09-02 08:45:52</sys_created_on>
+        <sys_id>af20a2bf47a9d110cf89ba48436d4351</sys_id>
+        <sys_mod_count>39</sys_mod_count>
+        <sys_name>GET Player</sys_name>
+        <sys_package display_value="LOL" source="x_872971_lol">8778aa2247651110cf89ba48436d4352</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LOL">8778aa2247651110cf89ba48436d4352</sys_scope>
+        <sys_update_name>sys_ws_operation_af20a2bf47a9d110cf89ba48436d4351</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-09-08 08:30:44</sys_updated_on>
+        <web_service_definition display_value="Players API">0fef5e7f47a9d110cf89ba48436d430e</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

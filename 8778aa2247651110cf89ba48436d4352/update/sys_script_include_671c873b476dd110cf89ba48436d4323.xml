@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_872971_lol.PlayersAPIHandler </api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>PlayersAPIHandler </name>
+        <script><![CDATA[var PlayersAPIHandler = Class.create();
+PlayersAPIHandler.prototype = {
+    initialize: function() {},
+    validatePostPlayer: function(playerObj) {
+
+        if ( playerObj.summonerId == 'undefined' ) {
+            throw {
+                code: 400,
+                message: "No summonerID was given" + playerObj.summonerId.length
+            };
+        }else if(playerObj.summonerId.length < 45){
+			throw {
+                code: 400,
+                message: "Summoner ID has to be 48 character long" + playerObj.summonerId.length
+            };
+		}
+        if (playerObj.summonerName.length > 16) {
+            throw {
+                code: 400,
+                message: "Summoner Name can have up to 16 chracters"
+            };
+        }
+        if (playerObj.wins < 0) {
+            throw {
+                code: 400,
+                message: "The amount of wins cannot be negative"
+            };
+        }
+        if (playerObj.loses < 0) {
+            throw {
+                code: 400,
+                message: "The amount of loses cannot be negative"
+            };
+        }
+        if (playerObj.leaguepoints < -15) {
+            throw {
+                code: 400,
+                message: "The amount of league points canot be less than 15"
+            };
+        }
+        return true;
+
+    },
+    postPlayer: function(requestString) {
+        //var requestString = request.body.dataString;
+        //try {
+        var playerObj = JSON.parse(requestString);
+
+        this.validatePostPlayer(playerObj);
+
+        var player = new GlideRecord('x_872971_lol_player');
+        player.initialize();
+        player.summonerid = playerObj.summonerId;
+        player.summonername = playerObj.summonerName;
+        player.wins = playerObj.wins;
+        player.loses = playerObj.loses;
+        player.leaguepoints = playerObj.leaguepoints;
+        player.insert();
+        return;
+        /* } catch (err) {
+              gs.info(err.message);
+          }*/
+    },
+    updatePlayer: function(requestString) {
+        //var requestString = request.body.dataString;
+        //try {
+        var playerObj = JSON.parse(requestString);
+
+        this.validatePostPlayer(playerObj);
+
+        var player = new GlideRecord('x_872971_lol_player');
+        player.addQuery("summonerid", playerObj.summonerId);
+        player.query();
+
+        if (player.next()) {
+			player.summonerid = playerObj.summonerId;
+            player.summonername = playerObj.summonerName;
+            player.wins = playerObj.wins;
+            player.loses = playerObj.loses;
+            player.leaguepoints = playerObj.leaguepoints;
+            player.update();
+        }
+        return;
+        /* } catch (err) {
+              gs.info(err.message);
+          }*/
+    },
+    getPlayers: function() {
+        var allPlayers = new GlideRecord('x_872971_lol_player');
+        allPlayers.query();
+
+        var allPlayersArray = [];
+
+        while (allPlayers.next()) {
+            var playerObj = {};
+            playerObj.name = allPlayers.summonername.toString();
+            playerObj.id = allPlayers.summonerid.toString();
+            allPlayersArray.push(playerObj);
+        }
+
+        return allPlayersArray;
+
+    },
+    getPlayer: function(id) {
+        var player = new GlideRecord('x_872971_lol_player');
+        player.addQuery('summonerid', id);
+        //gs.info('vidas trolina ' + request.pathParams.id);
+        player.query();
+        if (!player.hasNext()) {
+            throw {
+				code: 404,
+				message: "No player with given id found"
+			};
+        }
+        var playerInfo = {};
+        var championArray = [];
+
+        var champions = new GlideRecord('x_872971_lol_champion_points');
+        champions.addQuery('player_champion.summonerid', id);
+        champions.query();
+
+        while (champions.next()) {
+            var champion = {};
+            champion.championName = champions.championname.toString();
+            champion.masteryPoints = champions.masterypoints.toString();
+            championArray.push(champion);
+        }
+        //var selectedPlayer = player.next();
+        if (player.next()) {
+            playerInfo.summonerName = player.summonername.toString();
+            playerInfo.sysCreatedBy = player.sys_created_by.toString();
+        }
+        //gs.info('testing' + player.summonername);
+        playerInfo.champions = championArray;
+
+        return playerInfo;
+    },
+    deletePlayer: function(id) {
+        var player = new GlideRecord('x_872971_lol_player');
+        player.addQuery('summonerid', id);
+        //gs.info('vidas trolina ' + request.pathParams.id);
+        player.query();
+        if (!player.hasNext()) {
+            var error = new sn_ws_err.ServiceError();
+            error.setStatus(404);
+            error.setMessage(404 + ", " + "no player with given id");
+            error.setDetail("no player with given id");
+            return error;
+        }
+        var playerInfo = {};
+        var championArray = [];
+
+        var champions = new GlideRecord('x_872971_lol_champion_points');
+        champions.addQuery('player_champion.summonerid', id);
+        champions.query();
+
+        while (champions.next()) {
+            var champion = {};
+            champion.championName = champions.championname.toString();
+            champion.masteryPoints = champions.masterypoints.toString();
+            championArray.push(champion);
+        }
+        //var selectedPlayer = player.next();
+        if (player.next()) {
+            playerInfo.summonerName = player.summonername.toString();
+            playerInfo.sysCreatedBy = player.sys_created_by.toString();
+        }
+        //gs.info('testing' + player.summonername);
+        playerInfo.champions = championArray;
+
+        player.deleteRecord(); //deletes record
+
+        return playerInfo;
+    },
+
+    type: 'PlayersAPIHandler '
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-09-02 11:59:44</sys_created_on>
+        <sys_id>671c873b476dd110cf89ba48436d4323</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name>PlayersAPIHandler </sys_name>
+        <sys_package display_value="LOL" source="x_872971_lol">8778aa2247651110cf89ba48436d4352</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="LOL">8778aa2247651110cf89ba48436d4352</sys_scope>
+        <sys_update_name>sys_script_include_671c873b476dd110cf89ba48436d4323</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-09-08 11:22:39</sys_updated_on>
+    </sys_script_include>
+</record_update>
